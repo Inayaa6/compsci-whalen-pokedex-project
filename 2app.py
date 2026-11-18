@@ -13,24 +13,24 @@ def lang ():
         x.append
 lang()
 
-def typ ():
+def typ (lang):
     type = input("What type of pokemon would you like? ")
-    y = def lang(x)
+    y == lang(x)
     w= [] 
     type.lower
     type[0].upper
     for y in type:
         print(moves["type"][type])
         w.append
-typ()
+typ(lang)
 
 def lettero ():
     let1 = input("Type the first letter of the pokemon you want ")
-    z = def typ(w)
+    z == typ(w)
     let1.upper
     for z in let1:
         print(let1)
-lettero
+lettero()
 
 
 """ if language == "english":
