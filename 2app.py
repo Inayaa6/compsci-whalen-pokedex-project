@@ -10,28 +10,31 @@ def lang ():
     x=[]
     for pokemon in data:
         print(pokemon["name"][language])
-        x.append
+        x.append(pokemon["name"][language])
+    return x    
 lang()
 
-def typ (lang):
+def typ ():
     type = input("What type of pokemon would you like? ")
-    y == lang(x)
+    y = lang()
     w= [] 
     type.lower
     type[0].upper
-    for y in type:
+    for type in y:
+        #content = lines(read)
         print(moves["type"][type])
-        w.append
-typ(lang)
+        w.append(moves["type"][type])
+    return w
+typ()
 
 def lettero ():
     let1 = input("Type the first letter of the pokemon you want ")
-    z == typ(w)
+    z = typ()
     let1.upper
-    for z in let1:
+    for let1 in z:
         print(let1)
+    return let1
 lettero()
-
 
 """ if language == "english":
             print(pokemon["name"][language])
