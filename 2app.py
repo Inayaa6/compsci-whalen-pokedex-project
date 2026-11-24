@@ -19,30 +19,29 @@ def typ ():
     y=[]
     f=lang()
     type.capitalize()
-    for pokemon in data: 
+    for pokemon in data:
         if type in [pokemon["type"]]:
             print(f[pokemon["name"]])
-            y.append
-            print(y)
+            y.append(pokemon["name"])
+        else:
+            b= input("Nothing Found, would you like to try again? ")
+            b.lower()
+            if b == "yes":
+                while y == []:
+                    c = input("What type of pokemon would you like? ")
+                    c.capitalize()
+                    for pokemon in data: 
+                        if c in [pokemon["type"]]:
+                            print(f[pokemon["name"]])
+                            y.append
+                            print(y)
         return y
-    if y == []:
-        b= input("Nothing Found, would you like to try again? ")
-        b.lower
-        if b == "yes":
-            while y == []:
-                c = input("What type of pokemon would you like? ")
-                c.capitalize()
-                for pokemon in data: 
-                    if c in [pokemon["type"]]:
-                        print(f[pokemon["name"]])
-                        y.append
-                        print(y)
-        return y
+    print(y)
 typ()
 
 def lettero ():
     let1 = input("Type the first letter of the pokemon you want ")
-    z = type()
+    z = typ()
     a = []
     let1.upper
     for pokemon in data:
@@ -53,6 +52,22 @@ def lettero ():
             print("no match")
     return a
 lettero()
+
+""" def practice():
+    users = [
+        {"name": "Alice", "role": "admin"},
+        {"name": "Bob", "role": "user"},
+        {"name": "Charlie", "role": "admin"},
+        {"name": "David"},
+        {"name": "Eve", "role": "moderator"}
+]
+    for users in users:
+        try:
+            if "admin" in users["role"]:
+                print(users["name"])
+        except KeyError:
+            continue
+practice() """
 
 """ if language == "english":
             print(pokemon["name"][language])
