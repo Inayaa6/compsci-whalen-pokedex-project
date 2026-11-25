@@ -6,11 +6,10 @@ move_data = json.load(moves)
 
 def lang ():
     language = input("Please type your desired language: english, japenese, chinese, or french: ")
-    language.lower
-    x=[]
+    language= language.lower()
+    x=language
     for pokemon in data:
         print(pokemon["name"][language])
-        x.append(pokemon["name"][language])
     return x
 lang()
 
@@ -18,38 +17,27 @@ def typ ():
     type = input("What type of pokemon would you like? ")
     y=[]
     f=lang()
-    type.capitalize()
+    type = type.capitalize()
     for pokemon in data:
-        if type in [pokemon["type"]]:
-            print(f[pokemon["name"]])
-            y.append(pokemon["name"])
-        else:
-            b= input("Nothing Found, would you like to try again? ")
-            b.lower()
-            if b == "yes":
-                while y == []:
-                    c = input("What type of pokemon would you like? ")
-                    c.capitalize()
-                    for pokemon in data: 
-                        if c in [pokemon["type"]]:
-                            print(f[pokemon["name"]])
-                            y.append
-                            print(y)
+        if type in pokemon["type"]:
+            print(pokemon["name"][f])
+            y.append(pokemon["name"][f])
         return y
-    print(y)
-typ()
+#typ()
+#I added random [] by accident
 
 def lettero ():
-    let1 = input("Type the first letter of the pokemon you want ")
-    z = typ()
+    let1 = input("Type the first letter of the pokemon you want ")  
     a = []
-    let1.upper
+    let1.upper()
     for pokemon in data:
-        if let1 in z[pokemon["name"]][0]:
-            print(pokemon["name"])
-            a.append
-        else:
-            print("no match")
+        try:
+            if let1 in pokemon["name"][0]:
+                print(pokemon["name"])
+                a.append(pokemon["name"])
+        except KeyError:
+            continue
+        
     return a
 lettero()
 
